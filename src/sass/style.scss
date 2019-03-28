@@ -1,0 +1,77 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  background-color: #1e1d29;
+  height: 100vh;
+}
+
+.radio-app {
+  max-width: 33.33%;
+  margin-top: 20px;
+  padding-top: 20px;
+
+  .header {
+    background-color: #f8a951;
+    color: #ffffff;
+    flex-wrap: nowrap;
+    border-radius: 25px 25px 0px 0px;
+
+    .title,
+    i {
+      padding: 5px;
+    }
+  }
+
+  .power-btn {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+  }
+}
+
+.stations {
+  max-width: 33.33%;
+  background-color: #2f2e3b;
+  .station {
+    padding: 20px 0 20px 0;
+  }
+  li {
+    list-style: none;
+    .list {
+      border-bottom: 0.02em solid #a0a9bd;
+      color: #a0a9bd;
+    }
+    span {
+      padding: 10px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+  button {
+    border-radius: 50%;
+    color: #a0a9bd;
+    border: 1px solid #a0a9bd;
+    background: none;
+    margin-top: 50px;
+  }
+}
+
+.play-bar {
+  max-width: 33.33%;
+  background-color: #2f2e3b;
+  text-align: center;
+  padding: 30px 0 30px 0;
+  color: #a0a9bd;
+  border-radius: 0px 0px 25px 25px;
+}
+.footer {
+  font-size: 24px;
+  color: #a0a9bd;
+  margin-top: 20px;
+}
