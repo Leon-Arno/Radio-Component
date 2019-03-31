@@ -5,30 +5,24 @@ import PlayingBar from './PlayingBar';
 import axios from 'axios';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.toggleRadio = this.toggleRadio.bind(this);
-    this.offRadio = this.offRadio.bind(this);
-  }
-
   state = {
     radioData: []
   };
-  toggleRadio(name, url) {
+  toggleRadio = (name, url) => {
     this.setState({
       activeRadio: {
         name: name,
         image: url
       }
     });
-  }
+  };
 
-  offRadio() {
+  offRadio = () => {
     console.log('hello');
     this.setState({
       activeRadio: {}
     });
-  }
+  };
   componentDidMount() {
     axios.get('https://teclead.de/recruiting/radios').then(res => {
       this.setState({ radioData: res.data.radios });
