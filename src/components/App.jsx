@@ -18,7 +18,6 @@ class App extends Component {
   };
 
   offRadio = () => {
-    console.log('hello');
     this.setState({
       activeRadio: {}
     });
