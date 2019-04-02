@@ -6,7 +6,7 @@ body {
 }
 
 .radio-app {
-  max-width: 33.33%;
+  width: 70%;
   margin-top: 20px;
   padding-top: 20px;
 
@@ -32,7 +32,7 @@ body {
 }
 
 .stations {
-  max-width: 33.33%;
+  width: 70%;
   background-color: #2f2e3b;
   .station {
     padding: 20px 0 20px 0;
@@ -63,7 +63,7 @@ body {
 }
 
 .play-bar {
-  max-width: 33.33%;
+  width: 70%;
   background-color: #22222c;
   text-align: center;
   padding: 30px 0 30px 0;
