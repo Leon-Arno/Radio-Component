@@ -23,7 +23,13 @@ class App extends Component {
     });
   };
   componentDidMount() {
+    let radioImages = ['RadioOne', 'RadioTwo', 'RadioThree', 'RadioFour'];
+
     axios.get('https://teclead.de/recruiting/radios').then(res => {
+      res.data.radios.map((radio, index) => {
+        radio.image = radio.image.replace('RadioOne', radioImages[index]);
+        return radio;
+      });
       this.setState({ radioData: res.data.radios });
     });
   }
@@ -39,7 +45,6 @@ class App extends Component {
           data={radioData}
           activeRadio={activeRadio}
         />
-        ;
         <PlayingBar activeRadio={activeRadio} />;
       </Fragment>
     );
