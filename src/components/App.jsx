@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
 import Station from './Station';
 import PlayingBar from './PlayingBar';
@@ -37,16 +37,20 @@ class App extends Component {
   render() {
     const { radioData, activeRadio } = this.state;
     return (
-      <Fragment>
-        <Header toggleRadio={this.toggleRadio} offRadio={this.offRadio} />
-        <Station
-          toggleRadio={this.toggleRadio}
-          offRadio={this.offRadio}
-          data={radioData}
-          activeRadio={activeRadio}
-        />
-        <PlayingBar activeRadio={activeRadio} />;
-      </Fragment>
+      <div className="container ">
+        <div className="row">
+          <div className="col-lg-4 col-md-6 col-sm-8 mx-auto">
+            <Header toggleRadio={this.toggleRadio} offRadio={this.offRadio} />
+            <Station
+              toggleRadio={this.toggleRadio}
+              offRadio={this.offRadio}
+              data={radioData}
+              activeRadio={activeRadio}
+            />
+            <PlayingBar activeRadio={activeRadio} />;
+          </div>
+        </div>
+      </div>
     );
   }
 }
