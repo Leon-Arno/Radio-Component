@@ -4,6 +4,7 @@ class Station extends Component {
   state = {};
 
   render() {
+    console.log(this.props);
     const { data, activeRadio } = this.props;
     return (
       <div className="container stations">
@@ -32,7 +33,11 @@ class Station extends Component {
                     </button>
                   </div>
                   {activeRadio && activeRadio.image && (
-                    <img src={activeRadio.image} alt="station info" />
+                    <img
+                      className="mt-3"
+                      src={activeRadio.image}
+                      alt="station info"
+                    />
                   )}
                   <div className="volume-control">
                     <button>
