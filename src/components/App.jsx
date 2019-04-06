@@ -31,6 +31,11 @@ class App extends Component {
         return radio;
       });
       this.setState({ radioData: res.data.radios });
+      console.log(
+        res.data.radios
+          .map(array => array.frequency)
+          .reduce((acc, value) => acc + value, 0)
+      );
     });
   }
 
