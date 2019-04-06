@@ -32,7 +32,7 @@ class App extends Component {
       });
       this.setState({ radioData: res.data.radios });
       console.log(
-        res.data.radios
+        this.state.radioData
           .map(array => array.frequency)
           .reduce((accumulator, value) => accumulator + value, 0)
         // ! Life
