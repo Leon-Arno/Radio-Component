@@ -34,7 +34,8 @@ class App extends Component {
       console.log(
         res.data.radios
           .map(array => array.frequency)
-          .reduce((acc, value) => acc + value, 0)
+          .reduce((accumulator, value) => accumulator + value, 0)
+        // ! Life
       );
     });
   }
