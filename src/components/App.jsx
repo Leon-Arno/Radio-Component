@@ -31,11 +31,19 @@ class App extends Component {
         return radio;
       });
       this.setState({ radioData: res.data.radios });
+      // ? Sum frequencies as items in a shopping cart.
       console.log(
         this.state.radioData
           .map(array => array.frequency)
           .reduce((accumulator, value) => accumulator + value, 0)
         // ! Life
+      );
+
+      console.log(
+        this.state.radioData.reduce(
+          (accumulator, value) => accumulator + value.frequency,
+          0
+        )
       );
     });
   }
