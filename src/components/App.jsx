@@ -38,7 +38,7 @@ class App extends Component {
           .reduce((accumulator, value) => accumulator + value, 0)
         // ! Life
       );
-
+      //? Solution 2
       console.log(
         this.state.radioData.reduce(
           (accumulator, value) => accumulator + value.frequency,
